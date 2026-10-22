@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101116" />
+  <title>LifeOS — Your life, coordinated</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/">
+        <span class="brand-icon">L</span>
+        <span>life<span class="accent">OS</span></span>
+      </a>
+
+      <p class="nav-label">WORKSPACE</p>
+      <button class="nav-item active" data-view="overview">◫ <span>Overview</span></button>
+      <button class="nav-item" data-view="tasks">☷ <span>My Tasks</span></button>
+      <button class="nav-item" data-view="assistant">✧ <span>AI Assistant</span></button>
+
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>LifeOS is online</strong><small>Your personal command center</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL COMMAND CENTER</p>
+          <h1 id="greeting">Good evening.</h1>
+          <p class="muted">Let's make today count.</p>
+        </div>
+        <div class="date-pill" id="today"></div>
+      </header>
+
+      <section class="stats">
+        <article class="stat-card">
+          <span class="stat-icon aqua">☷</span>
+          <p>Pending tasks</p>
+          <h2 id="pending-count">0</h2>
+          <small>Tasks still on your plate</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon purple">✓</span>
+          <p>Completed</p>
+          <h2 id="completed-count">0</h2>
+          <small>Wins worth celebrating</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon orange">⚡</span>
+          <p>High priority</p>
+          <h2 id="high-count">0</h2>
+          <small>Tasks needing attention</small>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel tasks-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">STAY ON TRACK</p><h2>My tasks</h2></div>
+            <button class="button secondary" id="refresh-btn">↻ Refresh</button>
+          </div>
+
+          <form id="task-form" class="task-form">
+            <input id="task-title" placeholder="What needs to get done?" maxlength="200" required />
+            <select id="task-priority" aria-label="Task priority">
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="low">Low</option>
+            </select>
+            <button class="button primary" type="submit">+ Add task</button>
+          </form>
+
+          <div id="task-list" class="task-list">
+            <p class="empty">Loading your tasks...</p>
+          </div>
+        </article>
+
+        <article class="panel assistant-panel">
+          <div class="assistant-heading">
+            <span class="ai-icon">✧</span>
+            <div><h2>LifeOS AI</h2><small><span class="live-dot"></span> Productivity assistant</small></div>
+          </div>
+
+          <div class="ai-intro">
+            <p class="eyebrow">YOUR DAY, SIMPLIFIED</p>
+            <h3>What's on your mind?</h3>
+            <p class="muted">Get your pending tasks prioritized or generate a plan for your day.</p>
+          </div>
+
+          <button class="suggestion" id="prioritize-btn">
+            <span>↗</span><span><strong>Prioritize my tasks</strong><small>See what matters most</small></span><span>→</span>
+          </button>
+          <button class="suggestion" id="plan-btn">
+            <span>◷</span><span><strong>Plan my day</strong><small>Build an ordered task plan</small></span><span>→</span>
+          </button>
+
+          <div id="ai-result" class="ai-result" aria-live="polite">
+            Your assistant is ready when you are.
+          </div>
+        </article>
+      </section>
+
+      <footer>Built with intention. Powered by possibility. <span>LifeOS v0.1</span></footer>
+      <div id="toast" class="toast" role="status"></div>
+    </main>
+  </div>
+</body>
+</html>

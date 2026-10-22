@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": "5ad35adf-e6bb-401f-bd73-376f5150b443",
+      "title": "Hackathon submission",
+      "description": "",
+      "priority": "high",
+      "dueDate": null,
+      "status": "completed",
+      "createdAt": "2026-10-22T21:10:47.055Z",
+      "completedAt": "2026-10-22T21:11:32.505Z"
+    },
+    {
+      "id": "2bcd6cef-917d-4b27-8622-5e22cd693a9e",
+      "title": "OS Lab work",
+      "description": "",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-10-22T21:11:07.703Z"
+    },
+    {
+      "id": "5258d61a-bc48-44be-bc99-277749dd5b01",
+      "title": "hehe",
+      "description": "",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-10-22T21:16:18.207Z"
+    }
+  ]
+}
